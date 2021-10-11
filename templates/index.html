@@ -1,39 +1,59 @@
-<html>
-  <head>
-    <style type="text/css">
-      body {
-        background-image: linear-gradient(-74deg, transparent 90%, rgba(255, 255, 255, 0.23) 20%), linear-gradient(-74deg, transparent 83%, rgba(255, 255, 255, 0.18) 15%), linear-gradient(-74deg, transparent 76%, rgba(255, 255, 255, 0.1) 15%), linear-gradient(to top, #127ab1, #1799e0, #1796db);
-    		background-size: cover;
-    		margin-bottom: 0px!important;
-        color: white;
-        font-family: 'Geomanist', sans-serif;
-  			font-weight: normal;
-      }
-      div.container {
-        max-width: 500px;
-        margin: 100px auto;
-        padding: 10px;
-        text-align: center;
-      }
-      h4 {
-        text-transform: initial;
-      }
-    </style>
-  </head>
-  <body>
-    <p align="center"><img align="middle" src=https://camo.githubusercontent.com/6bc04a6490c7549566902093ff2f349fa5e6715d88169713221cfd851b0bd045/68747470733a2f2f7777772e6c616365776f726b2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031392f30372f4c616365776f726b5f4c6f676f5f636f6c6f725f323031392e737667 width=30%></img></p>
-    <h1 align=center style='text-align:center'><span style='font-family:"Arial",sans-serif;
-    ;color:black'>Welcome to the Hops & DevOps of the 22nd of Sept in Berlin<o:p></o:p></span></h1>
-    <h1 align="center">Congratulations on deploying this Kubernetes App protected by Lacework</h1>
-    <p align="center">Kubernetes POD ID: {{hostname}}</p>
-    <div class="container">
-        <img src="{{url}}" />
-	  </div>
-    <p align="center"><OUTPUT></p>
-    <p align="center"><button onclick="window.location.href='http://beer.laceworkdemo.com/lacework';">
-       Lacework Vulnerabilities Scan Report
-    </button></p>
-    <p align="center"><a href="https://twitter.com/intent/tweet?button_hashtag=securedbylacework" class="twitter-hashtag-button" data-size="large" data-text="I saw how @AutomateCloud deployed a @docker container in @Kubernetes with #Python and #Alpine protected by @lacework during the Hops&DevOps and hybrid meetup event in Berlin" data-url="https://www.linkedin.com/events/meetup-hops-devops-berlineditio6835923089667174400/" data-lang="en" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-    <p align="center"><div id="idLinkedInIcon" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://www.lacework.net');" style="background-color:rgb(0, 102, 170);border-radius:6px;color:white;cursor:pointer;display:inline-block;font:bold 50px Arial, Helvetica, sans-serif;height:55px;margin-top:1px;text-align:center;width:55px;">in</div></p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Lacework Shift Left Demo App</title>
+</head>
+
+<body>
+    <div class="px-4 pt-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='lacework.svg') }}" alt="" height="100">
+        <h1 class="display-4 fw-bold ">The Data-Driven Security Platform For the Cloud</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 text-secondary">{{ event_text }}</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="https://twitter.com/intent/tweet/?text={{ tweet_text_url }}t&amp;url=https%3A%2F%2Fwww.lacework.com"
+                    target="_blank">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                        </svg>
+                        Twitter
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.lacework.com&amp;title={{ tweet_text_url }}t&amp;summary={{ tweet_text_url }}t&amp;source=https%3A%2F%2Fwww.lacework.com"
+                    target="_blank">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                        Linkedin
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="container px-5">
+                <img src="{{ url }}" class="img-fluid mb-4" alt="BeachOps" height="500" loading="lazy">
+            </div>
+        </div>
+        <p class="text-secondary">This containers hostname/id is: {{ hostname }}<br>
+            <a href="{{ url_for('lacework') }}">Scanned for vulnerabilities</a> by Lacework.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
