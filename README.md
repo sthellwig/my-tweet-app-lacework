@@ -1,7 +1,7 @@
 # my-tweet-app
 Docker demo example application
 
-![alt text](https://github.com/jeromebaude/my-tweet-app-lacework/blob/main/Pictures/picturenew.png?raw=true)
+![alt text](https://github.com/automatecloud/my-tweet-app-lacework/blob/main/Pictures/picturenew.png?raw=true)
 
 ## For what is this repository?
 
