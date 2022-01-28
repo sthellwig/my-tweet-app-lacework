@@ -39,5 +39,5 @@ spec:
         ports:
         - containerPort: 5000
         securityContext:
-          allowPrivilegeEscalation: false
-          privileged: false
+          allowPrivilegeEscalation: true
+          privileged: true
