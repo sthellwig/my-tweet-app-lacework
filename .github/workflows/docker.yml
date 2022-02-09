@@ -32,6 +32,8 @@ jobs:
              LW_SCANNER_SCAN_LIBRARY_PACKAGES: true
              LW_SCANNER_DISABLE_UPDATES: true
            with:
+             LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }}
+             LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
              image_name: securethecloud/my-tweet-app-lacework
              image_tag: ${{ env.GHA_SHA }}
              fail_only_if_vulnerabilities_fixable: false
