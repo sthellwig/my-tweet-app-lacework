@@ -34,8 +34,8 @@ jobs:
              LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
              image_name: securethecloud/my-tweet-app-lacework
              image_tag: ${{ env.GHA_SHA }}
-             save_html_report: false
-             html_report_file_name: myreport.html
+             BUILD_REPORT_FILE_NAME: true
+             USE_POLICY: true
    
          - name: Login to DockerHub
            uses: docker/login-action@v1
