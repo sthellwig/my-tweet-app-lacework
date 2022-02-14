@@ -24,6 +24,12 @@
             "problemMatcher": [],
         },
         {
+            "label": "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
+            "type": "shell",
+            "command": "soluble kubernetes-scan -d deployment",
+            "problemMatcher": [],
+        },
+        {
             "label": "Lacework: Delete Docker image for vulnerability scanning",
             "type": "shell",
             "command": "docker image rm --force ${workspaceFolderBasename}:lw-scanner",
@@ -35,6 +41,7 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Lacework: Build Docker image for vulnerability scanning (x86)",
+                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Scan Docker image for vulnerabilities",
                 "Lacework: Delete Docker image for vulnerability scanning"
             ]
@@ -45,6 +52,7 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Lacework: Build Docker image for vulnerability scanning (ARM)",
+                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Scan Docker image for vulnerabilities",
                 "Lacework: Delete Docker image for vulnerability scanning"
             ]
