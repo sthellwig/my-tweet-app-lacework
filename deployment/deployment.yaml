@@ -16,10 +16,10 @@ spec:
         app: my-tweet-app
     spec:
       containers:
-      - name: my-tweet-app
-        image: securethecloud/my-tweet-app-lacework:latest
-        ports:
-        - containerPort: 5000
-        securityContext:
-          allowPrivilegeEscalation: false
-          privileged: false
+        - name: my-tweet-app
+          image: securethecloud/my-tweet-app-lacework:latest
+          ports:
+            - containerPort: 5000
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
