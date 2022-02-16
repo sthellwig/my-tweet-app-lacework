@@ -5,7 +5,7 @@ import platform
 
 app = Flask(__name__)
 
-event_text = "Test Welcome to the Hops & DevOps New Year Edition 2022 Part II"
+event_text = "Welcome to the Hops & DevOps New Year Edition 2022 Part II"
 tweet_text = "Hello from Hops&DevOps. Just enjoyed a fantastic presentation from @automatecloud about Shift Left Security with #laceworks #hopsndevops"
 
 
