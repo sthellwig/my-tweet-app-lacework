@@ -41,8 +41,8 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Lacework: Build Docker image for vulnerability scanning (x86)",
-                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Scan Docker image for vulnerabilities",
+                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Delete Docker image for vulnerability scanning"
             ]
         },
@@ -52,8 +52,8 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Lacework: Build Docker image for vulnerability scanning (ARM)",
-                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Scan Docker image for vulnerabilities",
+                "Lacework: Scan Kubernetes Deployment files for vulnerabilities",
                 "Lacework: Delete Docker image for vulnerability scanning"
             ]
         }
