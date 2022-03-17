@@ -24,6 +24,7 @@ spec:
                     allowPrivilegeEscalation: false
                     privileged: false
                     readOnlyRootFilesystem: true
-                    drop:
-                        - NET_RAW
-                        - ALL
+                    capabilities:
+                        drop:
+                            - NET_RAW
+                            - ALL
